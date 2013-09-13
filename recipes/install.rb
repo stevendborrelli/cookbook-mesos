@@ -45,6 +45,7 @@ end
 
 bash "building mesos from source" do
   cwd   File.join("#{node[:mesos][:home]}", "mesos")
+  environment 'JAVA_HOME' => node[:mesos][:java_home]
   code  <<-EOH
     ./bootstrap
     mkdir -p build

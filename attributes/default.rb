@@ -3,6 +3,7 @@ default[:mesos] = {
   :prefix  => "/usr/local",
   :home => "/opt",
   :cluster_name => "MyCluster",
+  :java_home => "/usr/lib/jvm/java-6-openjdk-amd64",
   :build   => {
     :skip_test => true
   },
